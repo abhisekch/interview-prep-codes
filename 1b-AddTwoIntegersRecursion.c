@@ -14,7 +14,7 @@ int addByRecursion(int a, int b) {
     }
 }
 
-int getNumFromString(const char *str) {
+int getIntFromString(const char *str) {
     int len = strlen(str);
     int num = 0, i = 0;
     if(str[0] == '-') {
@@ -31,12 +31,12 @@ int getNumFromString(const char *str) {
 
 int main(int argc, char const *argv[])
 {
-    int input1 = 0, input2 = 0, result = 0, len = 0;
+    int input1 = 0, input2 = 0, result = 0;
     const char *str1, *str2; //const is required to avoid compilation warnings
     str1 = argv[1];
     str2 = argv[2];
-    input1 = getNumFromString(str1);
-    input2 = getNumFromString(str2);
+    input1 = getIntFromString(str1);
+    input2 = getIntFromString(str2);
     /*input1 = atoi(argv[1]);
     input2 = atoi(argv[2]);*/
     result = addByRecursion(input1, input2);
