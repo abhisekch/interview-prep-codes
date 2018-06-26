@@ -4,17 +4,15 @@
 
 int getNumFromString(const char *str) {
     int len = strlen(str);
-    int num = 0;
+    int num = 0, i = 0;
     if(str[0] == '-') {
-        for(int i = 1; i < len; i++) {
-            num = (num * 10) + (str[i] - 48);
-        }
-        num = 0 - num;
+        i++;
     }
-    else {
-        for(int i = 0; i < len; i++) {
-            num = (num * 10) + (str[i] - 48);
-        }
+    for(; i < len; i++) {
+        num = (num * 10) + (str[i] - 48);
+    }
+    if(str[0] == '-') {
+        num = 0 - num;
     }
     return num;
 }
