@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<ctype.h>
 
 int getIntFromString(const char *str) {
     int len = strlen(str);
@@ -19,14 +20,31 @@ int getIntFromString(const char *str) {
 
 int main(int argc, char const *argv[])
 {
-    if(argc == 1 || argc == 2 || argc > 3) {
-        return 0;
+    if(argc != 3) {
+        return 1;
     }
     else {
         int input1 = 0, input2 = 0, quotient = 0, rem = 0;
         const char *str1, *str2;
         str1 = argv[1];
         str2 = argv[2];
+        int i = 0, j = 0;
+        if(str1[i] == '-') {
+            i++;
+        }
+        if(str2[j] == '-') {
+            j++;
+        }
+        for(; i < strlen(str1); i++) {
+            if(!isdigit(str1[i])) {
+                return 1;
+            }
+        }
+        for(; j < strlen(str2); j++) {
+            if(!isdigit(str2[j])) {
+                return 1;
+            }
+        }
         input1 = getIntFromString(str1);
         input2 = getIntFromString(str2);
         /*input1 = atoi(str1);
