@@ -45,6 +45,12 @@ int main(int argc, char const *argv[])
         if(str2[j] == '-') {
             j++;
         }
+        if((i == 1) && (strlen(str1) == 1)) {
+            return 1;
+        }
+        if((j == 1) && (strlen(str2) == 1)) {
+            return 1;
+        }
         for(; i < strlen(str1); i++) {
             if(!isdigit(str1[i]) && str1[i]!='.') {
                 return 1;

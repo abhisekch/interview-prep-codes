@@ -28,6 +28,15 @@ int main(int argc, char const *argv[])
         str1 = argv[1];
         str2 = argv[2];
         str3 = argv[3];
+        if((str1[0] == '-') && (strlen(str1) == 1)){
+            return 1;
+        }
+        if((str2[0] == '-') && (strlen(str2) == 1)){
+            return 1;
+        }
+        if((str3[0] == '-') && (strlen(str3) == 1)){
+            return 1;
+        }
         int len1 = strlen(str1), len2 = strlen(str2), len3 = strlen(str3);
         for(int i=0; i< len1; i++) {
             if(!isdigit(str1[i])){
