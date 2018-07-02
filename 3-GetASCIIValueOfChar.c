@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
     }
     else {
         int ASCII = 0;
-        if(strlen(argv[1] > 1)) {
+        if(strlen(argv[1]) > 1) {
             return 1;
         }
         const char *ch = argv[1];
