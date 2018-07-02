@@ -27,7 +27,14 @@ int main(int argc, char const *argv[])
         const char *str;
         str = argv[1];
         int len = strlen(str);
-        for(int i=0; i<len; i++) {
+        int i = 0;
+        if(str[i] == '-') {
+            i++;
+        }
+        if((i == 1) && (strlen(str) == 1)) {
+            return 1;
+        }
+        for(; i<len; i++) {
             if(!isdigit(str[i])) {
                 return 1;
             }
