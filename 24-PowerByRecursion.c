@@ -50,8 +50,13 @@ int main(int argc, char const *argv[])
         }
         input1 = atoi(str1);
         input2 = atoi(str2);
-        result = powerByRecursion(input1, input2);
-        printf("%d\n", result);
+        result = powerByRecursion(input1, abs(input2));
+        if(input2 < 0) {
+            printf("%f\n", (1.0 / result));
+        }
+        else {
+            printf("%d\n", result);
+        }
     }
     return 0;
 }

@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
                 return 1;
             }
         }
-        input = atoi(str);
+        input = abs(atoi(str));
         while(input > 0) {
             result++;
             input /= 10;

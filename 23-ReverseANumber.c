@@ -14,10 +14,7 @@ int main(int argc, char const *argv[])
         str = argv[1];
         int i = 0;
         if(str[i] == '-') {
-            i++;
-        }
-        if((i == 1) && (strlen(str) == 1)) {
-            return 1;
+            return 1; //assuming only positive numbers can be reversed
         }
         for(; i < strlen(str); i++) {
             if(!isdigit(str[i])) {
