@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "ratio": "c"
-    }
+    },
+    "files.autoSave": "onFocusChange"
 }
