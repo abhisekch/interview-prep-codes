@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
                     return 1; //assuming only positive numbers need to be converted
                 }
                 for(; i < strlen(str2); i++) {
-                    if(!isdigit(str2[i])) {
+                    if(!isdigit(str2[i]) || ((str2[i] != '0') && (str2[i] != '1'))) {
                         return 1;
                     }
                 }
