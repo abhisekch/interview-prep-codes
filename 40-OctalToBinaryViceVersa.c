@@ -1,3 +1,9 @@
+/*
+* There exists a better implementation to achieve the same
+* But am too lazy right now to do that :p
+* So adding this comment to remind myself later to improve this
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
